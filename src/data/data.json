@@ -1,0 +1,165 @@
+{
+    "cursos": [
+        {
+            "curso": {
+                "titulo": "Gestão, Governança e Tecnologias em Saúde",
+                "tipo": "pos",
+                "descricao": "Seja capaz de lidar com toda a complexidade da gestão de sistemas de saúde nas esferas pública e privada, dominando temas sensíveis como liderança, regulação, comunicação, compliance e epidemiologia. Curso reconhecido pelo MEC. "
+            },
+            "depoimentos": [
+                {
+                    "depoimento": "O ensino da Unesc é bem avaliado no mundo, pois é uma das melhores universidades do Brasil.",
+                    "imagem": "https:\/\/f.hubspotusercontent30.net\/hubfs\/8943330\/Rui%20Leandro%20(1).jpg",
+                    "nome": "Rui Leandro Cem da Costa",
+                    "ocupacao": "Aluno de Pós-graduação da UNESC, de Portugal"
+                }
+            ],
+            "obras": [
+                {
+                    "titulo": "Regulação em saúde",
+                    "autor": "Barbosa, Bezerra e Najberg"
+                },
+                {
+                    "titulo": "Guia de governança e gestão em saúde",
+                    "autor": "Brasil. Tribunal de Contas da União"
+                },
+                {
+                    "titulo": "Planejamento e Gestão em Saúde: conceitos",
+                    "autor": "Francisco Javier Uribe Rivera, Elizabeth Artmann"
+                }
+            ]
+        },
+        {
+            "curso": {
+                "titulo": "User Experience (UX) e design de experiências",
+                "tipo": "pos",
+                "descricao": "Seja um especialista em uma área cada vez mais estratégica: experiência do usuário. Domine as interfaces entre o humano e o digital com enfoque em UX e design. Curso reconhecido pelo MEC.  "
+            },
+            "depoimentos": [
+                {
+                    "depoimento": "O ensino da Unesc é bem avaliado no mundo, pois é uma das melhores universidades do Brasil.",
+                    "imagem": "https:\/\/f.hubspotusercontent30.net\/hubfs\/8943330\/Rui%20Leandro%20(1).jpg",
+                    "nome": "Rui Leandro Cem da Costa",
+                    "ocupacao": "Aluno de Pós-graduação da UNESC, de Portugal"
+                }
+            ],
+            "obras": [
+                {
+                    "titulo": "O Design do dia-a-dia",
+                    "autor": "NORMAN, Donald A.; CARDOSO, Deiró"
+                },
+                {
+                    "titulo": "Não me faça pensar",
+                    "autor": "KRUG, Steve"
+                },
+                {
+                    "titulo": "Jornada do Design Thinking",
+                    "autor": "LEWRICK, Michael;   LINK, Patrick;   LEIFER, Larry"
+                },
+                {
+                    "titulo": "Design Centrado no Usuário",
+                    "autor": "LOWDERMILK, Travis"
+                }
+            ]
+        },
+        {
+            "curso": {
+                "titulo": "Marketing, Branding e Experiência Digital",
+                "tipo": "mba",
+                "descricao": "Seja um especialista em utilizar as mais variadas técnicas de marketing, pricing e branding a serviço das marcas e dos resultados. Explore a comunicação por múltiplos canais atingindo os públicos desejados. Curso reconhecido pelo MEC.  "
+            },
+            "depoimentos": [
+                {
+                    "depoimento": "O ensino da Unesc é bem avaliado no mundo, pois é uma das melhores universidades do Brasil.",
+                    "imagem": "https:\/\/f.hubspotusercontent30.net\/hubfs\/8943330\/Rui%20Leandro%20(1).jpg",
+                    "nome": "Rui Leandro Cem da Costa",
+                    "ocupacao": "Aluno de Pós-graduação da UNESC, de Portugal"
+                }
+            ],
+            "obras": [
+                {
+                    "titulo": "Estratégia de marketing",
+                    "autor": "HOOLEY, Graham J.; SAUNDERS, John A.; PIERCY, Nigel"
+                },
+                {
+                    "titulo": "Preço",
+                    "autor": "POUNDSTONE, William"
+                },
+                {
+                    "titulo": "Branding: Gestão de marcas",
+                    "autor": "TYBOUT, Alice M"
+                },
+                {
+                    "titulo": "Marketing Digital na Prática",
+                    "autor": "FAUSTINO, Paulo"
+                }
+            ]
+        },
+        {
+            "curso": {
+                "titulo": "Terapia Cognitivo Comportamental (TCC): metodologia e prática clínica",
+                "tipo": "mba",
+                "descricao": "Potencialize seus conhecimentos em Terapia Cognitivo Comportamental e todas as suas possibilidades de aplicação adequada para os mais diversos cenários e necessidades de potenciais pacientes e grupos. Curso reconhecido pelo MEC.  "
+            },
+            "depoimentos": [
+                {
+                    "depoimento": "O ensino da Unesc é bem avaliado no mundo, pois é uma das melhores universidades do Brasil.",
+                    "imagem": "https:\/\/f.hubspotusercontent30.net\/hubfs\/8943330\/Rui%20Leandro%20(1).jpg",
+                    "nome": "Rui Leandro Cem da Costa",
+                    "ocupacao": "Aluno de Pós-graduação da UNESC, de Portugal"
+                }
+            ],
+            "obras": [
+                {
+                    "titulo": "Terapia cognitivo-comportamental: Teoria e prática",
+                    "autor": "Judith S. Beck"
+                },
+                {
+                    "titulo": "A TCC baseada em evidências.",
+                    "autor": "Deborah Dobson, Keith S. Dobson"
+                },
+                {
+                    "titulo": "Introdução à terapia cognitivo-comportamental contemporânea.",
+                    "autor": "Stefan G. Hofmann"
+                },
+                {
+                    "titulo": "Regulação emocional em psicoterapia",
+                    "autor": "Robert L. Leahy e outros"
+                }
+            ]
+        },
+        {
+            "curso": {
+                "titulo": "Liderança: gestão, resultados e engajamento",
+                "tipo": "mba",
+                "descricao": "Seja um especialista em liderar, capaz de enxergar a liderança pelos mais variados ângulos. Maximize sua capacidade de compreender toda a complexidade da tomada de decisões, das relações hierárquicas e todas as variáveis a serem consideradas. Curso reconhecido pelo MEC. "
+            },
+            "depoimentos": [
+                {
+                    "depoimento": "O ensino da Unesc é bem avaliado no mundo, pois é uma das melhores universidades do Brasil.",
+                    "imagem": "https:\/\/f.hubspotusercontent30.net\/hubfs\/8943330\/Rui%20Leandro%20(1).jpg",
+                    "nome": "Rui Leandro Cem da Costa",
+                    "ocupacao": "Aluno de Pós-graduação da UNESC, de Portugal"
+                }
+            ],
+            "obras": [
+                {
+                    "titulo": "Inteligência Social",
+                    "autor": "Daniel Goleman"
+                },
+                {
+                    "titulo": "Inclusifique",
+                    "autor": "Stefanie K. Johnson "
+                },
+                {
+                    "titulo": "Líderes e Números",
+                    "autor": "Elon Musk"
+                },
+                {
+                    "titulo": "Pipeline de Liderança",
+                    "autor": "Ram Charan, Drotter e Noel"
+                }
+            ]
+        }
+    ]
+}
