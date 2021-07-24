@@ -1,0 +1,23 @@
+.hero {
+    // position: relative;
+    width: 100%;
+    // filter: drop-shadow(10px);
+
+    &__text-content {
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: calc(100% - 3px);
+        background: linear-gradient(90deg, rgba(62,17,81,1) 8%, rgba(62,17,81,0) 100%);
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__image {
+        font-size: 0;
+        width: 100%;
+    }
+}

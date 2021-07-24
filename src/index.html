@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                <h1>LOGO</h1>
+                <img class="header__logo-image" src="assets/img/logo.png">
+                <!-- <p class="header__logo-text">UniLorem</p> -->
             </div>
             <div class="hamburger">
                 <div class="hamburger__middle"></div>
@@ -33,23 +35,36 @@
     </header>
 
     <main>
-        <div class="container">
-            <h1>Conheça Nossos Cursos</h1>
-            <button class="todos">TODOS</button>
-            <button class="mba">MBA</button>
-            <button class="pos">POS</button>
 
-            <section class="courses"></section>
-
-            <div class="modal">
-                <button class="modal__button">Close</button>
-                <div class="modal__container"></div>
+        <!-- <section class="hero">
+            <div class="hero__text-content">
+                <h1 class="hero__title">Estude aqui</h1>
+                <h2 class="hero__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
             </div>
-        </div>
+            <img class="hero__image" src="assets/img/hero-2.jpg" alt="campus">
+        </section> -->
+
+        <section class="courses">
+            <div class="container">
+                <h1 class="courses__header">Conheça Nossos Cursos</h1>
+                <button class="courses__btn courses__btn-all">TODOS</button>
+                <button class="courses__btn courses__btn-mba">MBA</button>
+                <button class="courses__btn courses__btn-pos">POS</button>
+
+                <div class="courses__list"></div>
+
+                <div class="modal">
+                    <button class="modal__button">Close</button>
+                    <div class="modal__container"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="container"></div>
+        <div class="container">
+            <p><span class="footer__text">Copyright &copy; 2021 UniLorem. Todos os direitos reservados.</span></p>
+        </div>
     </footer>
     <script src="js/index.js"></script>
 </body>

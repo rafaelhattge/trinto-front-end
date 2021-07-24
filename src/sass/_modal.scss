@@ -2,18 +2,86 @@
 @use "mixins";
 
 .modal {
+    width: 100vw;
+    height: 100vh;
+
     visibility: hidden;
     opacity: 0;
-    background: colors.$primary-gray;
-    position: absolute;
+    background: rgba($color: colors.$primary-purple, $alpha: 1);
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
-    transition: opacity .5s;
+    transition: opacity 0.5s;
+    display: flex;
+    color: #fff;
+    font-family: "Rubik", sans-serif;
+
+    &__button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    &__container {
+        width: 90%;
+        margin: 50px auto 0 auto;
+    }
+
+    &__wrapper {
+        width: 90%;
+        height: 90vh;
+        margin: 10% auto;
+    }
 
     &.open {
         visibility: visible;
         opacity: 1;
+    }
+}
+
+.modal__course {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid colors.$accent-gold;
+
+    &-title {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: "Rubik", sans-serif;
+        border-bottom: 3px solid colors.$accent-gold;
+        padding-bottom: 3px;
+        margin-bottom: 10px;
+    }
+
+    &-type {
+
+    }
+
+    &-description {
+        font-size: .9rem;
+    }
+}
+
+.modal__bibliography {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid colors.$accent-gold;
+}
+
+.modal__tests {
+    &.testimonial {
+        font-style: italic;
+    }
+
+    &.image-wrapper {
+        overflow: hidden;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 100px;
+        height: 110px;
+    }
+    &.image {
+        width: 100%;
     }
 }

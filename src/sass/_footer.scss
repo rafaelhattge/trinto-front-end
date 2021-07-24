@@ -1,0 +1,7 @@
+@use "_colors";
+
+.footer {
+    background: colors.$primary-purple;
+    height: 100px;
+    margin-top: auto;
+}

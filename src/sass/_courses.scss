@@ -1,0 +1,51 @@
+@use "_colors";
+@use "_mixins";
+.courses {
+    &__header {
+        font-family: "Rubik", sans-serif;
+        color: colors.$primary-purple;
+        font-size: 1.5rem;
+        margin: 6px 0;
+    }
+
+    &__list {
+        @include mixins.small {
+            font-size: 2rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    &__btn {
+        font-family: "Rubik", sans-serif;
+        font-weight: normal;
+        border-radius: 6px;
+        border: 2px solid colors.$accent-purple;
+        background-color: colors.$accent-gold;
+        padding: 4px;
+    }
+}
+
+.course {
+    cursor: pointer;
+    border: 2px solid colors.$accent-purple;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.6rem;
+    min-height: 140px;
+    width: 400px;
+    max-width: 90%;
+    margin: 10px;
+    // background: colors.$primary-brown;
+    border-radius: 10px;
+    margin: 10px 10px;
+    padding: 20px;
+
+    &:hover {
+        color: #fff;
+        border: 2px solid colors.$primary-purple;
+        background: colors.$primary-purple;
+    }
+}
