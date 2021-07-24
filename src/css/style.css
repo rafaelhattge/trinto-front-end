@@ -65,6 +65,7 @@ body {
 }
 .header__logo-image {
   padding-left: 20px;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -275,7 +276,6 @@ body {
   min-height: 100px;
   min-width: 300px;
   width: 90%;
-  margin: 10px;
   border-radius: 10px;
   margin: 10px 10px;
   padding: 20px;
@@ -347,6 +347,11 @@ body.open {
   padding-bottom: 1px;
   font-family: "Rubik", sans-serif;
   color: #daa520;
+}
+@media (min-width: 530px) {
+  .modal__button {
+    right: 20px;
+  }
 }
 .modal__container {
   width: 90%;
