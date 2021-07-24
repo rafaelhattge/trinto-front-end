@@ -3,6 +3,7 @@ const hamburger = document.querySelector(".hamburger");
 const modalEl = document.querySelector(".modal");
 const modalButtonEl = document.querySelector(".modal__button");
 const modalContainerEl = document.querySelector(".modal__container");
+const navUlEl = document.querySelector(".nav ul");
 let courses;
 
 // AJAX
@@ -40,7 +41,6 @@ const renderCourseDetails = (id) => {
             </div>`;
 
     const templateTestimonial = `<div class="modal__testims-wrapper">
-    <h3 class="modal__testims-title">Depoimentos:</h3>
     ${depoimentos.map(item => {
         return `<div class="modal__testims">
         <div class="modal__testims image-testim-container">
@@ -79,7 +79,7 @@ const filterCourses = tipo => {
     renderCourses(data);
 }
 
-
+// Ativa ou desativa os botões dos filtros
 const toggleButton = (element) => {
     const buttons = document.querySelectorAll(".courses__btn");
     buttons.forEach(button => {
@@ -95,9 +95,15 @@ modalButtonEl.addEventListener("click", () => {
 });
 
 hamburger.addEventListener("click", () => {
-    const ul = document.querySelector(".nav ul");
-    ul.classList.contains("open") ? ul.classList.remove("open") : ul.classList.add("open");
-    hamburger.classList.contains("open") ? hamburger.classList.remove("open") : hamburger.classList.add("open");
+    if (hamburger.classList.contains("open")) {
+        hamburger.classList.remove("open");
+        navUlEl.classList.remove("open");
+        document.body.classList.remove("open");
+    } else {
+        hamburger.classList.add("open");
+        navUlEl.classList.add("open");
+        document.body.classList.add("open");
+    }
 });
 
 document.querySelector(".courses__btn-all").addEventListener("click", e => {
@@ -112,6 +118,14 @@ document.querySelector(".courses__btn-pos").addEventListener("click", e => {
     toggleButton(e.target);
     filterCourses("pos");
 });
+
+window.addEventListener("resize", () => {
+    if (document.body.clientWidth > 530) {
+        hamburger.classList.remove("open");
+        navUlEl.classList.remove("open");
+        document.body.classList.remove("open");
+    }
+})
 
 window.addEventListener("DOMContentLoaded", () => {
     getCourses();

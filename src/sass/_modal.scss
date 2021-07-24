@@ -1,6 +1,10 @@
 @use "colors";
 @use "mixins";
 
+body.open {
+    position: fixed;
+}
+
 .modal {
     width: 100vw;
     height: 100vh;
@@ -38,6 +42,7 @@
         padding: 1.3rem;
         max-width: 600px;
         background: rgba($color: colors.$accent-purple, $alpha: 1);
+        border-radius: 10px;
 
         @include mixins.medium {
             max-width: 800px;
@@ -116,6 +121,11 @@
         @include mixins.small {
             font-size: .9rem;
         }
+
+        @include mixins.medium {
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
     }
 }
 
@@ -148,7 +158,7 @@
 
     &.testimonial-wrapper {
         margin-left: 20px;
-        margin-top: 10px;
+        // margin-top: 10px;
         width: 60%;
     }
 

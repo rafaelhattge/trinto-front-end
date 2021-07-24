@@ -310,6 +310,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+body.open {
+  position: fixed;
 }
 
 .modal {
@@ -348,6 +353,7 @@ body {
   padding: 1.3rem;
   max-width: 600px;
   background: #310d40;
+  border-radius: 10px;
 }
 @media (min-width: 800px) {
   .modal__container {
@@ -424,6 +430,12 @@ body {
     font-size: 0.9rem;
   }
 }
+@media (min-width: 800px) {
+  .modal__bibliography-item {
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+}
 
 .modal__testimonial-title {
   margin-bottom: 8px;
@@ -448,7 +460,6 @@ body {
 }
 .modal__testims.testimonial-wrapper {
   margin-left: 20px;
-  margin-top: 10px;
   width: 60%;
 }
 .modal__testims__testimonial {
