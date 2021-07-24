@@ -37,7 +37,6 @@
         width: 90%;
         padding: 1.3rem;
         max-width: 600px;
-        // margin: 20px auto auto auto;
         background: rgba($color: colors.$accent-purple, $alpha: 1);
 
         @include mixins.medium {

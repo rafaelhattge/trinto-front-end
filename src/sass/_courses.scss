@@ -2,6 +2,11 @@
 @use "_mixins";
 
 .courses {
+
+    // position: relative;
+    min-height: 550px;
+    margin-bottom: 12px;
+
     &__header {
         font-family: "Rubik", sans-serif;
         color: colors.$primary-purple;

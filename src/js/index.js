@@ -15,6 +15,7 @@ const getCourses = async () => {
     renderCourses(courses);
 }
 
+// Renderiza lista de Cursos
 const renderCourses = data => {
     coursesEl.innerHTML = "";
     data.map((item, index) => {
@@ -28,6 +29,7 @@ const renderCourses = data => {
     });
 }
 
+// Renderiza os detalhes de um curso selecionado
 const renderCourseDetails = (id) => {
     const { curso, depoimentos, obras } = courses[id];
 
@@ -71,15 +73,15 @@ const renderCourseDetails = (id) => {
     modalContainerEl.insertAdjacentHTML("beforeend", templateTestimonial);
 }
 
-
+// Filtra os cursos de acordo com o tipo
 const filterCourses = tipo => {
     let data = courses.filter(item => { return tipo == item.curso.tipo });
     renderCourses(data);
 }
 
+
 const toggleButton = (element) => {
     const buttons = document.querySelectorAll(".courses__btn");
-    console.log("toggle");
     buttons.forEach(button => {
         button.classList.remove("active")
     })
