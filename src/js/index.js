@@ -49,6 +49,11 @@ const renderCourseDetails = (id) => {
     modalContainerEl.insertAdjacentHTML("beforeend", template);
 }
 
+const filterCourses = tipo => {
+    let data = courses.filter(item => { return tipo == item.curso.tipo });
+    renderCourses(data);
+}
+
 modalButtonEl.addEventListener("click", () => {
     modalEl.classList.remove("open");
 });
@@ -64,6 +69,10 @@ hamburger.addEventListener("click", () => {
 //         //handle click
 //     })
 // })
+
+document.querySelector(".todos").addEventListener("click", e => renderCourses(courses));
+document.querySelector(".mba").addEventListener("click", e => filterCourses("mba"));
+document.querySelector(".pos").addEventListener("click", e => filterCourses("pos"));
 
 window.addEventListener("DOMContentLoaded", () => {
     getCourses();
