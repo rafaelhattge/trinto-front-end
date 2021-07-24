@@ -1,31 +1,50 @@
 @use "_colors";
 @use "_mixins";
+
 .courses {
     &__header {
         font-family: "Rubik", sans-serif;
         color: colors.$primary-purple;
         font-size: 1.5rem;
-        margin: 6px 0;
-    }
+        margin: 12px 0;
 
-    &__list {
-        @include mixins.small {
-            font-size: 2rem;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
+        @include mixins.medium {
+            margin-left: 20px;
         }
     }
 
     &__btn {
+        cursor: pointer;
         font-family: "Rubik", sans-serif;
         font-weight: normal;
         border-radius: 6px;
         border: 2px solid colors.$accent-purple;
-        background-color: colors.$accent-gold;
         padding: 4px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    &__btn.active {
+        background-color: colors.$accent-gold;
+    }
+
+    button:first-of-type {
+        margin-left: 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mixins.medium {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mixins.large {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
@@ -34,18 +53,24 @@
     border: 2px solid colors.$accent-purple;
     font-family: "Rubik", sans-serif;
     font-size: 1.6rem;
-    min-height: 140px;
-    width: 400px;
-    max-width: 90%;
+    min-height: 100px;
+    min-width: 300px;
+    width: 90%;
     margin: 10px;
-    // background: colors.$primary-brown;
     border-radius: 10px;
     margin: 10px 10px;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         color: #fff;
         border: 2px solid colors.$primary-purple;
         background: colors.$primary-purple;
+    }
+
+    @include mixins.small {
+        min-height: 200px;
     }
 }

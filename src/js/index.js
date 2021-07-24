@@ -37,31 +37,33 @@ const renderCourseDetails = (id) => {
                 <p class="modal__course-description"><strong>Descrição:</strong> ${curso.descricao}</p>\
             </div>`;
 
-    const templateTestimonial = `<h3>Depoimentos:</h3>
+    const templateTestimonial = `<div class="modal__testims-wrapper">
+    <h3 class="modal__testims-title">Depoimentos:</h3>
     ${depoimentos.map(item => {
-        return `<div class="modal__tests">
-        <div class="modal__tests image-wrapper">
-            <img class="modal__tests image" src=${item.imagem} alt="foto de ${item.nome}" />
+        return `<div class="modal__testims">
+        <div class="modal__testims image-testim-container">
+            <div class="modal__testims image-wrapper">
+                <img class="modal__testims image" src=${item.imagem} alt="foto de ${item.nome}" />
+            </div>
+            <div class="modal__testims testimonial-wrapper">
+                <p class="modal__testims__testimonial">"${item.depoimento}"</p>
+                <p class="modal__testims__name">${item.nome}</p>
+                <p class="modal__testims__occupation">${item.ocupacao}</p>
+            </div>
         </div>
-        <p class="modal__tests testimonial">"${item.depoimento}"</p>
-        <p class="modal__tests name">${item.nome}</p>
-        <p class="modal__tests occupation">${item.ocupacao}</p>
+
         </div>`
-    })}`;
+    })}</div>`;
 
     const templateBibliography = `<div class="modal__bibliography">
-        <h3>Obras:</h3>
+        <h3 class="modal__bibliography-title">Obras:</h3>
         ${obras.map(item => {
         return `<div class="modal__bibliography-item">
-            <p>${item.titulo}</p>
+            <cite>${item.titulo}</cite>
             <p>${item.autor}</p>
         </div>`
     }).join("")}
     </div>`;
-
-    console.log(templateTestimonial)
-
-    // const templateBibliography = ``;
 
     modalContainerEl.innerHTML = "";
     modalContainerEl.insertAdjacentHTML("beforeend", templateCourse);
@@ -70,29 +72,22 @@ const renderCourseDetails = (id) => {
 }
 
 
-// const renderCourseDetails = (id) => {
-//     const { curso, depoimentos, obras } = courses[id];
-
-//     const template = `<div class="modal__wrapper">
-//             <h2 class="modal__title">${curso.titulo}</h2>
-//             <h3 class="modal__type">Tipo: ${curso.tipo}</h3>
-//             <p class="modal__description">${curso.descricao}</p>
-//             ${depoimentos.map(item => `<p class="modal__testimonial">${item.depoimento}</p>
-//             <img src=${item.imagem} alt="foto de ${item.nome}" />
-//             <p>${item.nome}</p>
-//             <p>${item.ocupacao}</p>`)}
-//             ${obras.map(item => `<p>${item.titulo}</p>
-//             <p>${item.autor}</p>`).join("")}</div>`;
-
-//     modalContainerEl.innerHTML = "";
-//     modalContainerEl.insertAdjacentHTML("beforeend", template);
-// }
-
 const filterCourses = tipo => {
     let data = courses.filter(item => { return tipo == item.curso.tipo });
     renderCourses(data);
 }
 
+const toggleButton = (element) => {
+    const buttons = document.querySelectorAll(".courses__btn");
+    console.log("toggle");
+    buttons.forEach(button => {
+        button.classList.remove("active")
+    })
+    element.classList.add("active");
+};
+
+
+// LISTENERS
 modalButtonEl.addEventListener("click", () => {
     modalEl.classList.remove("open");
 });
@@ -103,16 +98,20 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.contains("open") ? hamburger.classList.remove("open") : hamburger.classList.add("open");
 });
 
-// document.querySelectorAll('.courses').forEach(item => {
-//     item.addEventListener('click', event => {
-//         //handle click
-//     })
-// })
-
-document.querySelector(".courses__btn-all").addEventListener("click", e => renderCourses(courses));
-document.querySelector(".courses__btn-mba").addEventListener("click", e => filterCourses("mba"));
-document.querySelector(".courses__btn-pos").addEventListener("click", e => filterCourses("pos"));
+document.querySelector(".courses__btn-all").addEventListener("click", e => {
+    toggleButton(e.target);
+    renderCourses(courses);
+});
+document.querySelector(".courses__btn-mba").addEventListener("click", e => {
+    toggleButton(e.target);
+    filterCourses("mba");
+});
+document.querySelector(".courses__btn-pos").addEventListener("click", e => {
+    toggleButton(e.target);
+    filterCourses("pos");
+});
 
 window.addEventListener("DOMContentLoaded", () => {
     getCourses();
 });
+

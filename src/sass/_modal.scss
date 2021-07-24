@@ -4,28 +4,45 @@
 .modal {
     width: 100vw;
     height: 100vh;
-
+    background: rgba($color: #000000, $alpha: 0.6);
     visibility: hidden;
     opacity: 0;
-    background: rgba($color: colors.$primary-purple, $alpha: 1);
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: opacity 0.5s;
     display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     font-family: "Rubik", sans-serif;
 
     &__button {
+        width: 30px;
+        height: 30px;
+        border: 2px solid colors.$accent-gold;
+        border-radius: 50%;
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        font-size: 1.3rem;
+        padding-bottom: 1px;
+        font-family: "Rubik", sans-serif;
+        color: colors.$accent-gold;
     }
 
     &__container {
         width: 90%;
-        margin: 50px auto 0 auto;
+        padding: 1.3rem;
+        max-width: 600px;
+        // margin: 20px auto auto auto;
+        background: rgba($color: colors.$accent-purple, $alpha: 1);
+
+        @include mixins.medium {
+            max-width: 800px;
+        }
     }
 
     &__wrapper {
@@ -46,42 +63,121 @@
     border-bottom: 2px solid colors.$accent-gold;
 
     &-title {
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-weight: bold;
         font-family: "Rubik", sans-serif;
         border-bottom: 3px solid colors.$accent-gold;
         padding-bottom: 3px;
         margin-bottom: 10px;
+
+        @include mixins.small {
+            font-size: 1.6rem;
+        }
     }
 
     &-type {
+        font-size: 1rem;
+        margin-bottom: 8px;
 
+        @include mixins.small {
+            font-size: 1.1rem;
+        }
     }
 
     &-description {
-        font-size: .9rem;
+        font-size: 0.8rem;
+
+        @include mixins.small {
+            font-size: 1rem;
+        }
     }
 }
 
 .modal__bibliography {
+    font-size: 0.9rem;
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 2px solid colors.$accent-gold;
+
+    &-title {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    &-item {
+        font-size: 0.7rem;
+        margin-bottom: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.1;
+
+        & cite {
+            line-height: 1.2;
+        }
+
+        @include mixins.small {
+            font-size: .9rem;
+        }
+    }
 }
 
-.modal__tests {
-    &.testimonial {
-        font-style: italic;
+.modal__testimonial {
+    &-title {
+        margin-bottom: 8px;
+    }
+}
+
+.modal__testims {
+    &-title {
+        margin-bottom: 8px;
+        font-size: 1rem;
+    }
+
+    &.image-testim-container {
+        display: flex;
     }
 
     &.image-wrapper {
         overflow: hidden;
-        border: 2px solid #fff;
-        border-radius: 5px;
+        border: 2px solid colors.$accent-gold;
+        border-radius: 10px;
         width: 100px;
         height: 110px;
     }
     &.image {
         width: 100%;
+    }
+
+    &.testimonial-wrapper {
+        margin-left: 20px;
+        margin-top: 10px;
+        width: 60%;
+    }
+
+    &__testimonial {
+        font-style: italic;
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+
+        @include mixins.small {
+            font-size: 1rem;
+        }
+    }
+
+    &__name {
+        font-size: 0.7rem;
+        color: colors.$accent-gold;
+        margin-bottom: 2px;
+
+        @include mixins.small {
+            font-size: .9rem;
+        }
+    }
+
+    &__occupation {
+        font-size: 0.6rem;
+
+        @include mixins.small {
+            font-size: .8rem;
+        }
     }
 }

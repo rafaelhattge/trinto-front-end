@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 button,
@@ -140,7 +141,7 @@ body {
   top: 80px;
   left: 0;
   height: 100vh;
-  width: 90%;
+  width: 50%;
   transform: translateX(-100%);
   transition: transform 0.3s;
 }
@@ -155,6 +156,7 @@ body {
     position: relative;
     top: initial;
     left: initial;
+    border-top: none;
   }
 }
 .nav__ul.open {
@@ -162,6 +164,20 @@ body {
 }
 .nav li {
   list-style: none;
+  border-top: 4px solid #310d40;
+}
+@media (min-width: 530px) {
+  .nav li {
+    border: none;
+  }
+}
+.nav li:last-of-type {
+  border-bottom: 4px solid #310d40;
+}
+@media (min-width: 530px) {
+  .nav li:last-of-type {
+    border: none;
+  }
 }
 .nav a {
   font-family: "Rubik", sans-serif;
@@ -170,14 +186,28 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   display: block;
-  padding: 10px 12px;
+  padding: 20px 52px;
   font-size: 1rem;
 }
 @media (min-width: 530px) {
   .nav a {
     padding: 10px 10px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
+}
+@media (min-width: 800px) {
+  .nav a {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .nav a {
+    padding: 10px 30px;
+  }
+}
+.nav a:hover {
+  color: #daa520;
 }
 
 .hero {
@@ -203,25 +233,44 @@ body {
   font-family: "Rubik", sans-serif;
   color: #3e1151;
   font-size: 1.5rem;
-  margin: 6px 0;
+  margin: 12px 0;
 }
-@media (min-width: 530px) {
-  .courses__list {
-    font-size: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+@media (min-width: 800px) {
+  .courses__header {
+    margin-left: 20px;
   }
 }
 .courses__btn {
+  cursor: pointer;
   font-family: "Rubik", sans-serif;
   font-weight: normal;
   border-radius: 6px;
   border: 2px solid #310d40;
-  background-color: #daa520;
   padding: 4px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.courses__btn.active {
+  background-color: #daa520;
+}
+.courses button:first-of-type {
+  margin-left: 20px;
+}
+.courses__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .courses__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1280px) {
+  .courses__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .course {
@@ -229,18 +278,26 @@ body {
   border: 2px solid #310d40;
   font-family: "Rubik", sans-serif;
   font-size: 1.6rem;
-  min-height: 140px;
-  width: 400px;
-  max-width: 90%;
+  min-height: 100px;
+  min-width: 300px;
+  width: 90%;
   margin: 10px;
   border-radius: 10px;
   margin: 10px 10px;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .course:hover {
   color: #fff;
   border: 2px solid #3e1151;
   background: #3e1151;
+}
+@media (min-width: 530px) {
+  .course {
+    min-height: 200px;
+  }
 }
 
 .footer {
@@ -248,30 +305,60 @@ body {
   height: 100px;
   margin-top: auto;
 }
+.footer .container {
+  height: 100%;
+}
+.footer__wrapper {
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .modal {
   width: 100vw;
   height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
   visibility: hidden;
   opacity: 0;
-  background: #3e1151;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.5s;
   display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-family: "Rubik", sans-serif;
 }
 .modal__button {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #daa520;
+  border-radius: 50%;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  font-size: 1.3rem;
+  padding-bottom: 1px;
+  font-family: "Rubik", sans-serif;
+  color: #daa520;
 }
 .modal__container {
   width: 90%;
-  margin: 50px auto 0 auto;
+  padding: 1.3rem;
+  max-width: 600px;
+  background: #310d40;
+}
+@media (min-width: 800px) {
+  .modal__container {
+    max-width: 800px;
+  }
 }
 .modal__wrapper {
   width: 90%;
@@ -289,33 +376,112 @@ body {
   border-bottom: 2px solid #daa520;
 }
 .modal__course-title {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   font-family: "Rubik", sans-serif;
   border-bottom: 3px solid #daa520;
   padding-bottom: 3px;
   margin-bottom: 10px;
 }
+@media (min-width: 530px) {
+  .modal__course-title {
+    font-size: 1.6rem;
+  }
+}
+.modal__course-type {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+@media (min-width: 530px) {
+  .modal__course-type {
+    font-size: 1.1rem;
+  }
+}
 .modal__course-description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+@media (min-width: 530px) {
+  .modal__course-description {
+    font-size: 1rem;
+  }
 }
 
 .modal__bibliography {
+  font-size: 0.9rem;
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid #daa520;
 }
-
-.modal__tests.testimonial {
-  font-style: italic;
+.modal__bibliography-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
-.modal__tests.image-wrapper {
+.modal__bibliography-item {
+  font-size: 0.7rem;
+  margin-bottom: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.1;
+}
+.modal__bibliography-item cite {
+  line-height: 1.2;
+}
+@media (min-width: 530px) {
+  .modal__bibliography-item {
+    font-size: 0.9rem;
+  }
+}
+
+.modal__testimonial-title {
+  margin-bottom: 8px;
+}
+
+.modal__testims-title {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.modal__testims.image-testim-container {
+  display: flex;
+}
+.modal__testims.image-wrapper {
   overflow: hidden;
-  border: 2px solid #fff;
-  border-radius: 5px;
+  border: 2px solid #daa520;
+  border-radius: 10px;
   width: 100px;
   height: 110px;
 }
-.modal__tests.image {
+.modal__testims.image {
   width: 100%;
+}
+.modal__testims.testimonial-wrapper {
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 60%;
+}
+.modal__testims__testimonial {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+@media (min-width: 530px) {
+  .modal__testims__testimonial {
+    font-size: 1rem;
+  }
+}
+.modal__testims__name {
+  font-size: 0.7rem;
+  color: #daa520;
+  margin-bottom: 2px;
+}
+@media (min-width: 530px) {
+  .modal__testims__name {
+    font-size: 0.9rem;
+  }
+}
+.modal__testims__occupation {
+  font-size: 0.6rem;
+}
+@media (min-width: 530px) {
+  .modal__testims__occupation {
+    font-size: 0.8rem;
+  }
 }
