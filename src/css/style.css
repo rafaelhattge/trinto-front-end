@@ -142,3 +142,32 @@ body {
   padding: 5px 8px;
   font-size: 1rem;
 }
+
+.course {
+  font-family: sans-serif;
+  font-size: 26px;
+  color: #fff;
+  width: 400px;
+  max-width: 90%;
+  margin: 10px;
+  background: #c5c29b;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  background: #a6b0b7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  transition: opacity 0.5s;
+}
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
